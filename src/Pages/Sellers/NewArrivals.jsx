@@ -1,0 +1,45 @@
+import ListingPage from "../../components/ListingPage";
+
+  const books = [
+    { id: 201, title: "Rich Dad Poor Dad", category: "Finance", price: "₹399.00", img: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=400&h=500&fit=crop", rating: 5, reviews: 500, isBestseller: true, description: "Robert Kiyosaki's financial guide on creating wealth and financial independence." },
+    { id: 202, title: "The Psychology of Money", category: "Finance", price: "₹450.00", img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop", rating: 5, reviews: 420, isBestseller: true, description: "Timeless lessons on wealth, greed, and happiness." },
+    { id: 203, title: "Ikigai", category: "Self-Help", price: "₹320.00", img: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=500&fit=crop", rating: 4, reviews: 350, isBestseller: true, description: "The Japanese secret to a long and happy life." },
+    { id: 204, title: "Sapiens", category: "History", price: "₹600.00", img: "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=400&h=500&fit=crop", rating: 5, reviews: 410, isBestseller: true, description: "A brief history of humankind by Yuval Noah Harari." },
+    { id: 205, title: "The Power of Now", category: "Spirituality", price: "₹480.00", img: "https://images.unsplash.com/photo-1589998059171-988d887df646?w=400&h=500&fit=crop", rating: 5, reviews: 310, isBestseller: true, description: "A guide to spiritual enlightenment by Eckhart Tolle." },
+    { id: 206, title: "The 7 Habits", category: "Productivity", price: "₹520.00", img: "https://images.unsplash.com/photo-1497636577773-f1231844b336?w=400&h=500&fit=crop", rating: 5, reviews: 370, isBestseller: true, description: "Powerful lessons in personal change by Stephen Covey." },
+    { id: 207, title: "How to Win Friends", category: "Communication", price: "₹360.00", img: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=400&h=500&fit=crop", rating: 5, reviews: 295, isBestseller: true, description: "Classic guide to effective communication and influence." },
+    { id: 208, title: "The Secret", category: "Motivational", price: "₹420.00", img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop", rating: 4, reviews: 280, isBestseller: true, description: "The law of attraction and positive thinking." },
+    { id: 209, title: "Think & Grow Rich", category: "Finance", price: "₹400.00", img: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=500&fit=crop", rating: 5, reviews: 500, isBestseller: true, description: "Napoleon Hill's classic on success and wealth building." },
+    { id: 210, title: "Man's Search for Meaning", category: "Philosophy", price: "₹350.00", img: "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=400&h=500&fit=crop", rating: 5, reviews: 360, isBestseller: true, description: "Viktor Frankl's profound work on finding meaning in life." },
+    { id: 211, title: "The Intelligent Investor", category: "Investment", price: "₹650.00", img: "https://images.unsplash.com/photo-1589998059171-988d887df646?w=400&h=500&fit=crop", rating: 5, reviews: 410, isBestseller: true, description: "Benjamin Graham's timeless investment principles." },
+    { id: 212, title: "Zero to One", category: "Business", price: "₹480.00", img: "https://images.unsplash.com/photo-1497636577773-f1231844b336?w=400&h=500&fit=crop", rating: 4, reviews: 220, isBestseller: true, description: "Notes on startups, or how to build the future." },
+    { id: 213, title: "The Alchemist", category: "Fiction", price: "₹380.00", img: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=400&h=500&fit=crop", rating: 5, reviews: 450, isBestseller: true, description: "A philosophical story about following your dreams by Paulo Coelho." },
+    { id: 214, title: "Atomic Habits", category: "Self-Help", price: "₹420.00", img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop", rating: 5, reviews: 380, isBestseller: true, description: "A proven system to build good habits and break bad ones." },
+    { id: 215, title: "Deep Work", category: "Productivity", price: "₹390.00", img: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=500&fit=crop", rating: 4, reviews: 320, isBestseller: true, description: "Rules for focused success in a distracted world." },
+    { id: 216, title: "Thinking, Fast and Slow", category: "Psychology", price: "₹520.00", img: "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=400&h=500&fit=crop", rating: 5, reviews: 290, isBestseller: true, description: "Daniel Kahneman's groundbreaking work on human thinking." },
+    { id: 217, title: "Dare to Lead", category: "Leadership", price: "₹440.00", img: "https://images.unsplash.com/photo-1589998059171-988d887df646?w=400&h=500&fit=crop", rating: 4, reviews: 260, isBestseller: true, description: "Brave work. Tough conversations. Whole hearts." },
+    { id: 218, title: "The Subtle Art of Not Giving a F*ck", category: "Self-Help", price: "₹370.00", img: "https://images.unsplash.com/photo-1497636577773-f1231844b336?w=400&h=500&fit=crop", rating: 5, reviews: 410, isBestseller: true, description: "A counterintuitive approach to living a good life." },
+    { id: 219, title: "Can't Hurt Me", category: "Motivation", price: "₹490.00", img: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=400&h=500&fit=crop", rating: 5, reviews: 340, isBestseller: true, description: "David Goggins' inspiring story of overcoming limitations." },
+    { id: 220, title: "Mindset", category: "Psychology", price: "₹410.00", img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop", rating: 4, reviews: 280, isBestseller: true, description: "The new psychology of success by Carol Dweck." },
+    { id: 221, title: "Start With Why", category: "Leadership", price: "₹380.00", img: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=500&fit=crop", rating: 5, reviews: 310, isBestseller: true, description: "Discover your purpose and inspire others to action." },
+    { id: 222, title: "The One Thing", category: "Productivity", price: "₹430.00", img: "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=400&h=500&fit=crop", rating: 4, reviews: 240, isBestseller: true, description: "The surprisingly simple truth behind extraordinary results." },
+    { id: 223, title: "Grit", category: "Psychology", price: "₹450.00", img: "https://images.unsplash.com/photo-1589998059171-988d887df646?w=400&h=500&fit=crop", rating: 5, reviews: 270, isBestseller: true, description: "The power of passion and perseverance by Angela Duckworth." },
+    { id: 224, title: "The Happiness Advantage", category: "Psychology", price: "₹390.00", img: "https://images.unsplash.com/photo-1497636577773-f1231844b336?w=400&h=500&fit=crop", rating: 4, reviews: 220, isBestseller: true, description: "How a positive brain fuels success in work and life." },
+    { id: 225, title: "Essentialism", category: "Productivity", price: "₹410.00", img: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=400&h=500&fit=crop", rating: 5, reviews: 290, isBestseller: true, description: "The disciplined pursuit of less but better." },
+    { id: 226, title: "The Compound Effect", category: "Self-Help", price: "₹360.00", img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop", rating: 4, reviews: 250, isBestseller: true, description: "Multiplying your success one simple step at a time." },
+    { id: 227, title: "Radical Candor", category: "Leadership", price: "₹470.00", img: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=500&fit=crop", rating: 5, reviews: 230, isBestseller: true, description: "How to be a great boss without losing your humanity." },
+    { id: 228, title: "The 5 AM Club", category: "Self-Help", price: "₹440.00", img: "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=400&h=500&fit=crop", rating: 4, reviews: 260, isBestseller: true, description: "Own your morning, elevate your life with Robin Sharma's wisdom." },
+    { id: 229, title: "Do Epic Shit", category: "Motivation", price: "₹380.00", img: "https://images.unsplash.com/photo-1589998059171-988d887df646?w=400&h=500&fit=crop", rating: 5, reviews: 300, isBestseller: true, description: "An inspiring guide by Ankur Warikoo for living a bold life." },
+    { id: 230, title: "Think Like a Monk", category: "Spirituality", price: "₹420.00", img: "https://images.unsplash.com/photo-1497636577773-f1231844b336?w=400&h=500&fit=crop", rating: 4, reviews: 270, isBestseller: true, description: "Jay Shetty's practical wisdom for a peaceful, meaningful life." }
+  ];
+
+ export default function NewArrivals() {
+  return (
+    <ListingPage
+      eyebrow="Reader favourites"
+      title="Best Sellers"
+      subtitle="Our top-rated and most loved books by readers."
+      books={books}
+    />
+  );
+}
